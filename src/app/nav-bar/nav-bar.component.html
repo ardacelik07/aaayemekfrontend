@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<nav class="navbar navbar-expand-lg " style="background-color: rgb(112, 160, 179);">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-5" routerLink="/home" routerLinkActive="active">
+      <img src="assets/img/logo.jpg" alt="" width="120" height="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 " style="font-size: 20px;">
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/home" routerLinkActive="active" style="color: white;" >Anasayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/kampanyalar" routerLinkActive="active" style="color: white;" >Kampanyalar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/restorantlar" routerLinkActive="active" style="color: white;" >ürünler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/yorumlar" routerLinkActive="active" style="color: white;" >yorumlar</a>
+        </li>
+       
+       
+        
+      </ul>
+
+      <ng-container *ngIf="(accountservice.currentUser$  | async) == null">
+        <div class="d-flex align-items-center me-5">
+        
+          <a routerLink="/basket" class="position-relative">
+            <i class="fa fa-shopping-cart fa-2x me-3 text-light me-4"></i>
+           
+        </a>
+          <button class="btn btn-light fa fa-sign-in btn-lg me-md-2" type="button" routerLink="/login" > Giriş Yap</button>
+          <button class="btn btn-light fa fa-user-plus btn-lg" type="button" routerLink="/register"> Kayıt Ol</button>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="(accountservice.currentUser$  | async)">
+        <div class="dropdown ms-3 me-5" style="cursor: pointer;" dropdown >
+        <a dropdownToggle class="dropdown-toggle">
+          <strong style="color: white;">Welcome arda</strong>
+        </a>
+
+        <ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+             <li class="py-1">
+              <a routerLink="/basket" class="dropdown-item">
+                     <i  class="fa fa-shopping-cart me-3"></i> Sepet
+              </a>
+             </li>
+            
+            
+             <div class="dropdown-divider"></div>
+             <li class="py-1">
+              <a (click)="logout()" class="dropdown-item">
+                     <i class="fa fa-sign-out me-3"></i> çıkış yap
+              </a>
+             </li>
+             
+
+        </ul>
+
+        </div>
+        
+      </ng-container>
+   
+    </div>
+  </div>
+</nav>

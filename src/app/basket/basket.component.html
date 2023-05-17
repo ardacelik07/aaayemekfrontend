@@ -1,0 +1,158 @@
+<app-nav-bar></app-nav-bar>
+<div class="container mt-2">
+
+   
+    <div >
+    <div class="pb-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 py-5 mb-1">
+                    <ng-container >
+
+                        <div class="table-reponsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="p-2 px-3 text-uppercase">ürün</div>
+                        
+                                        </th>
+                                        <th scope="col" class="border-0 bg-light">
+                                            <div class="py-2 text-uppercase">fiyat</div>
+                                        </th>
+                                        <th scope="col" class="border-0 bg-light">
+                                            <div class="py-2 text-uppercase">miktar</div>
+                                        </th>
+                                        <th scope="col" class="border-0 bg-light">
+                                            <div class="py-2 text-uppercase">toplam</div>
+                                        </th>
+                                        <th    scope="col" class="border-0 bg-light">
+                                            <div class="py-2 text-uppercase">Sil</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   <tr >
+                                     <th scope="row">
+                                        <div class="p-2">
+                                            <img src="assets/img/balık.jpg" alt="balık"
+                                            class="img-fluid" style="max-height: 50px;">
+                                            <div class="ms-4 d-inline-block align-middle">
+                                                <h5 class="mb-0">
+                                                    <a  >balık</a>
+                                                </h5>
+                                                <span class="text-muted font-weight-normal font-italic d-block">
+                                                    tip: balık
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        
+                                     </th>
+                                     <td class="align-middle"><strong>30 tl</strong>
+                                    </td>
+                                     <td class="align-middle">
+                                        <div class="d-flex align-items-center">
+                                            <i    class="fa fa-minus-circle text-warning mr-2" style="cursor:pointer;font-size: 2em;"></i>
+                                       <span class="font-weight-bold" style="font-size: 1.5em;" >
+                                    1
+                                    </span>
+                                     <i       class="fa fa-plus-circle text-warning mx-2" style="cursor:pointer; font-size: 2em;"></i> 
+                                        </div>
+                                     </td>
+                                    <td class="align-middle"><strong>30 TL</strong>
+                        
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <a class="text-danger">
+                                            <i        class="fa 
+                                            fa-trash" style="font-size: 2em; cursor: pointer;"></i>
+                                        </a>
+                                    </td>
+                                   </tr> 
+                                   <tr  *ngIf="control ==0" >
+                                    
+                                        <th scope="row">
+                                            <div class="p-2">
+                                                <img src="assets/img/kebapürünleri.jpg" alt="balık"
+                                                class="img-fluid" style="max-height: 50px;">
+                                                <div class="ms-4 d-inline-block align-middle">
+                                                    <h5 class="mb-0">
+                                                        <a  >kebap</a>
+                                                    </h5>
+                                                    <span class="text-muted font-weight-normal font-italic d-block">
+                                                        tip: kebap
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
+                                         </th>
+                                         <td  class="align-middle"><strong>50 tl</strong>
+                                        </td>
+                                         <td   class="align-middle">
+                                            <div class="d-flex align-items-center">
+                                                <i    class="fa fa-minus-circle text-warning mr-2" style="cursor:pointer;font-size: 2em;"></i>
+                                           <span class="font-weight-bold" style="font-size: 1.5em;" >
+                                        1
+                                        </span>
+                                         <i       class="fa fa-plus-circle text-warning mx-2" style="cursor:pointer; font-size: 2em;"></i> 
+                                            </div>
+                                         </td>
+                                        <td   class="align-middle"><strong>50 TL</strong>
+                            
+                                        </td>
+                                        <td   class="align-middle text-center">
+                                            <a class="text-danger" >
+                                                <i     (click)="delete()"   class="fa 
+                                                fa-trash" style="font-size: 2em; cursor: pointer;"></i>
+                                            </a>
+                                        </td>
+                            </table>
+                        </div>
+                    
+                    </ng-container>
+                </div>
+            </div>
+
+            <div class="row">
+               <div class="col-6 offset-6">
+                <div class="bg-light px-4 py-3 text-uppercase font-weight-bold">
+
+                    <strong>Sipariş Özeti</strong>
+                </div>
+                <div class="p-4">
+                  
+                    <ul class="list-unstyled mb-4">
+                
+                        <li class="d-flex justify-content-between py-3 border-bottom">
+                           
+                            <strong class="text-muted">total fiyat</strong>
+                            <strong>80 TL</strong>
+                        </li>
+                        <li class="d-flex justify-content-between py-3 border-bottom">
+                
+                           
+                            <strong class="text-muted">getirme ücreti</strong>
+                            <strong>5 Tl</strong>
+                        </li>
+                      
+                        <li class="d-flex justify-content-between py-3 border-bottom">
+                           
+                            <strong class="text-muted">Total</strong>
+                            <strong>85 tl</strong>
+                        </li>
+                    </ul>
+                </div>
+                <a routerLink="/payment" class="btn btn-primary py-2 ms-3">
+                    ödeme yap
+                </a>
+               </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</div>

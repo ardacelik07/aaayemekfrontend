@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+<div class="container mt-5">
+
+    <div><i class="fa fa-check-circle fa-5x" style="color:green;"></i></div>
+    <h2>Teşekkürler Siparişiniz onaylandı</h2>
+    <p class="mb-4">Siparişiniz Hakkında Yorum Yapmak istermisiniz ?</p>
+
+ 
+    <div style="margin-top: 120px;" >
+        <h4  class="mt-2 ">Yorum yap</h4>
+    <textarea class="form-control"
+     [value]="'yorum yaz..'"
+     name="introduction"
+     rows="6"
+     ></textarea>
+
+
+
+
+
+    <button  routerLink="/restorantlar" class="btn btn-outline-success me-2 mt-3">Ürünler</button>
+    <button  routerLink="/yorumlar" class="btn btn-outline-success mt-3">Yorum Yap</button>
+</div>
