@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasketComponent implements OnInit {
  control: number = 0;
+ control2: number = 0;
   constructor() { }
 
   ngOnInit(): void {
@@ -14,5 +15,9 @@ export class BasketComponent implements OnInit {
   delete(){
   this.control = 1;
   console.log(this.control);
+  }
+  delete2(){
+   this.control2 =1;
+   
   }
 }

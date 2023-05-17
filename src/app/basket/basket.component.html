@@ -33,7 +33,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   <tr >
+                                   <tr  *ngIf="control2 ==0">
                                      <th scope="row">
                                         <div class="p-2">
                                             <img src="assets/img/balık.jpg" alt="balık"
@@ -66,7 +66,7 @@
                                     </td>
                                     <td class="align-middle text-center">
                                         <a class="text-danger">
-                                            <i        class="fa 
+                                            <i     (click)="delete2()"   class="fa 
                                             fa-trash" style="font-size: 2em; cursor: pointer;"></i>
                                         </a>
                                     </td>
